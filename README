@@ -1,0 +1,22 @@
+This package contains:
+1. bptree.h:      definition of the B-Plus-Tree node.
+                  definition of the max number of record in index and leaf node
+2. bptree.c:      implementation of the B-Plus-Tree. Mainly for tree init/query/
+                  print/record insert/record delete.
+3. bpt_utils.c:   utility functions.
+4. bptree_test.c: test code.
+5. *.log:         test results. B-Plus-Tree printed after each insert/delete.
+
+To run the test code:
+  gcc -o bpt bptree.c bptree_test.c
+  ./bpt
+
+Currently there are only three testcases:
+1. test1(): insert 100 records into the bptree, using 0..99 as the key;
+2. test2(): delete the node from the tree created in test1; delete happens from
+            99 to 0;
+3. test3(): delete the node from the tree created in test1; delete happens from
+            0 to 99.
+
+The B-Plus-Tree algorithm is referenced from <<Database System Concept, 6th 
+edition>>.
