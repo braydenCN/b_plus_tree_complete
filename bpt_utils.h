@@ -1,13 +1,14 @@
-/* Copyright(c) Brayden Zhang
+/* 
+ * Copyright(c) Brayden Zhang
  * Mail: pczhang2010@gmail.com
  */
 
 #ifndef _BPT_UTILS_H
 #define _BPT_UTILS_H
 
-static inline void swap_pointer(void** a, void** b);
-static inline void* my_calloc(int size);
-static inline int get_1st_ge(long a[], int len, long k);
+static inline void swap_pointer (void** a, void** b);
+static inline void* my_calloc (int size);
+static inline int get_1st_ge (long a[], int len, long k);
 
 void
 swap_pointer(void** a, void** b)
@@ -21,7 +22,7 @@ void*
 my_calloc(int size)
 {
 	void* p = calloc(1, size);
-	if( p == NULL){
+	if (p == NULL) {
 		fprintf(stderr, "Memory allocation failed\n");
 		exit(-1);
 	}
@@ -37,8 +38,8 @@ get_1st_ge(long a[], int len, long k)
 {
 	/* TODO: replaced with binary search */
 	int i;
-	for(i = 0; i < len; i++)
-		if(a[i] >= k)
+	for (i = 0; i < len; i++)
+		if (a[i] >= k)
 			return i;
 	return len;
 }
